@@ -1,0 +1,43 @@
+﻿@page "/AntCalc"
+
+<h3>AntCalc</h3>
+<p>
+    <label>
+        frequency in MHz: 
+        <input @bind="frequency" />
+    </label>
+</p>
+<p role = "status">Wavelength in free space (m): @wavelength </p>
+
+<p role = "status">Length of a full wave loop (m): @loop</p>
+
+<p role = "status">Length of half wave dipole (m): @dipole </p>
+
+<button class="btn btn-primary" @onclick="waveCal">Calculate</button>
+
+@code {
+    private double frequency { get; set; }
+    private double wavelength;
+    private double loop;
+    private double dipole;
+
+    private void waveCal()
+    {
+        wavelength = 300 / frequency;
+        loopCal();
+        dipCal();
+    }
+
+    private void dipCal()
+    {
+        wavelength = 300 / frequency;
+        dipole = (wavelength / 2) * 0.96;
+    }
+
+    private void loopCal()
+    {
+        wavelength = 300 / frequency;
+        loop = wavelength * 0.96;
+    }
+}
+
