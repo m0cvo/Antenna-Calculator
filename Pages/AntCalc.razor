@@ -15,6 +15,22 @@
 
 <button class="btn btn-primary" @onclick="waveCal">Calculate</button>
 
+<p> 
+    <h2>Dipole</h2>
+    The Dipole calculation gives the length of one half wavelength taking into account the velocity factor of the wire used (Cu or Fe) to create it.  For a sigle band centre fed dipole
+    simply cut the wire in the middle and feed it here directly with 50ohm coax (or via a 1:1 BALUN).  The diameter of the wire used may affect the bandwidth of the antenna.  For a multi-
+    band off centre fed dipole, divide the overall length by three and cut the antenna this distance from the one end.  This is the 200ohm point and will need feeding via either a 4:1 
+    BALUN or a length of 200ohm ribbon feeder.  Both 1:1 and 4:1 BALUNs are readily available from <a href="www.m0cvoantennas.com">M0CVO Antennas</a>.
+</p>
+<p>
+    <h2>Loop</h2>
+    The Loop calculation returns the value for a full wave loop taking into accout the velocity factor of the wire used (Cu or Fe) to create it.  This can be fed with either a 2:1 BALUN 
+    for a single band loop or a 4:1 BALUN for a multi-band loop.  The 4:1 BALUN is available from <a href="www.m0cvoantennas.com">M0CVO Antennas</a>.  The loop can be aranged as either a 
+    quad loop (square) or a delta loop (triangle).  As a quad loop it can give a gain of up to 2.8dBd and as a delta loop a gain of up to 3.2dBd.
+</p>
+
+<img src="/images/loop patterns.jpg" />
+
 @code {
     private double frequency { get; set; }
     private double wavelength;
