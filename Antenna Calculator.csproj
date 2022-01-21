@@ -4,7 +4,35 @@
     <TargetFramework>net6.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+    <ApplicationIcon>Mogpie-1.ico</ApplicationIcon>
+    <BaseOutputPath>C:\Users\nigel\source\repos\Antenna-Calculator\bin</BaseOutputPath>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <PackageId>AntennaCalculator</PackageId>
+    <Version>3.2.01</Version>
+    <Authors>Nigel Booth</Authors>
+    <Company>Mogpie Software</Company>
+    <Description>Antenna calculator for amateur or professional use</Description>
+    <Copyright>N.Booth, M0CVO for Mogpie 2022</Copyright>
+    <PackageIcon>Mogpie.jpg</PackageIcon>
+    <RepositoryUrl>https://github.com/m0cvo/Antenna-Calculator</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>antenna; amateur radio; design tools;</PackageTags>
+    <NeutralLanguage>en-GB</NeutralLanguage>
+    <PackageLicenseExpression><license type="expression">MIT</license></PackageLicenseExpression>
+    <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="Mogpie-1.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="D:\Pictures\Mogpie.jpg">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="6.0.1" />
